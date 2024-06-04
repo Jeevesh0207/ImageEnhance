@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
 from flask import send_file
+from flask_cors import CORS
 import cv2
 import numpy as np
 import io
 
 app = Flask(__name__)
+CORS(app)
 
 # Function to adjust brightness, contrast, and color saturation
 def adjust_image_properties(image, alpha, beta, saturation):
