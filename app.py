@@ -6,7 +6,7 @@ import numpy as np
 import io
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Function to adjust brightness, contrast, and color saturation
 def adjust_image_properties(image, alpha, beta, saturation):
